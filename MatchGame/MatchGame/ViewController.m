@@ -23,12 +23,17 @@
 @property (nonatomic) int flipsCounter;
 
 @property (strong , nonatomic) CardMatchingGame * game;
+
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
 
 @property (weak, nonatomic) IBOutlet UIView *scoreLabel;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel2;
 
 @property (weak, nonatomic) IBOutlet UISwitch *matchSwitch;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segMatch;
+
+@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
+
 
 @end
 
@@ -40,9 +45,29 @@
 - (IBAction)changeCardNum:(UISwitch *)sender {
     if(sender.isOn){
         self.game.numOfCards = 2;
+        self.segMatch.selectedSegmentIndex = 1;
+        
     }else{
         self.game.numOfCards = 3;
+        self.segMatch.selectedSegmentIndex = 0;
+        
     }
+}
+
+- (IBAction)indexChanged:(UISegmentedControl *)sender {
+    switch (sender.selectedSegmentIndex) {
+        case 0:
+           // self.matchSwitch.selected = YES;
+            [self.matchSwitch setOn:NO animated:YES];
+            break;
+        case 1:
+            [self.matchSwitch setOn:YES animated:YES];
+            break;
+        default:
+            break;
+            
+    }
+    [self changeCardNum:self.matchSwitch];
 }
 
 - (CardMatchingGame *)game{
@@ -72,6 +97,8 @@
 {
     return [[PlayingCardDeck alloc] init];
 }
+- (IBAction)jjj:(id)sender {
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -83,7 +110,9 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)touchCardButton:(UIButton *)sender {
+      self.game.numOfCards = (self.matchSwitch.on)? 2 : 3;
     self.matchSwitch.enabled = NO;
+    self.segMatch.enabled = NO;
     NSUInteger choosenIndex = [self.cardButtons indexOfObject:sender];
     [self.game chooseCardAtIndex:choosenIndex];
     [self updateUI];
@@ -91,6 +120,7 @@
 }
 - (IBAction)ReDeal:(UIButton *)sender {
     self.matchSwitch.enabled = YES;
+    self.segMatch.enabled = YES;
     self.game = nil;
     self.game.numOfCards = (self.matchSwitch.on)? 2 : 3;
     [self updateUI];
@@ -107,6 +137,8 @@
         curButton.enabled = !card.isMatched;
         self.scoreLabel2.text= [NSString stringWithFormat:@"Score: %ld" ,self.game.score];
     }
+    
+    self.statusLabel.text = self.game.status;
     
 }
 

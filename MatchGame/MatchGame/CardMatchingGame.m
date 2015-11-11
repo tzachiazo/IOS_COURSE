@@ -11,6 +11,8 @@
 @interface CardMatchingGame()
 @property (nonatomic , readwrite) NSInteger score;
 @property (nonatomic , strong) NSMutableArray *cards; //of cards
+@property (nonatomic, readwrite ) NSString * status;
+
 
 @end
 
@@ -67,6 +69,7 @@ static const int COST_TO_CHOOSE = 1;
 
 - (void) chooseCardAtIndex:(NSInteger)index
 {
+    self.status = @"STATUS!!!!";
     NSMutableArray * openCards;
     openCards = [[NSMutableArray alloc] init];
     
@@ -75,6 +78,7 @@ static const int COST_TO_CHOOSE = 1;
     if(!card.isMatched){
         if(card.isChosen){
             card.chosen = NO;
+            self.status = [@"Flip back card: " stringByAppendingString:card.contents];
         }else{
             
             for(Card *otherCard in self.cards){
@@ -87,8 +91,12 @@ static const int COST_TO_CHOOSE = 1;
                 
             
                 int matchScore = [card match:openCards];
+                self.status = [self cardArrayToString:openCards];
+                self.status = [self.status stringByAppendingString: [card.contents stringByAppendingString:@" "]];
                 
                 if(matchScore){
+                    self.status =
+                    [self.status stringByAppendingString:[NSString stringWithFormat:@" are Matche! and you got %d points" , matchScore * MATCH_BONUS] ];
                     self.score += matchScore * MATCH_BONUS;
                     //Mark all open cards as Matched
                     for(Card * curCard in openCards){
@@ -96,6 +104,8 @@ static const int COST_TO_CHOOSE = 1;
                     }
                     card.matched = YES;
                 }else{
+                    
+                    self.status = [self.status stringByAppendingString:@" Are Not Matche!" ];
                     self.score -= MISMATCH_PENALTY;
                     for(Card * curCard in openCards){
                         curCard.chosen = NO;
@@ -115,4 +125,19 @@ static const int COST_TO_CHOOSE = 1;
     
     
 }
+
+
+-(NSString *)cardArrayToString:(NSMutableArray *)cardArray
+{
+    NSString * ans = @"";
+    
+    for(Card * card in cardArray){
+        ans = [[ans stringByAppendingString:[card contents]] stringByAppendingString:@" "] ;
+    }
+    
+    return ans;
+    
+}
+
+
 @end
