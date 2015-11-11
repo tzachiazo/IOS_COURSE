@@ -6,7 +6,7 @@
 //  Copyright © 2015 Tzachi Azo. All rights reserved.
 //
 
-//comment for Ex2
+//comment for Ex2 2
 #import <XCTest/XCTest.h>
 
 @interface MatchGameTests : XCTestCase
