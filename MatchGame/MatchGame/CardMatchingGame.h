@@ -17,8 +17,10 @@
 - (void) chooseCardAtIndex: (NSInteger)index;
 - (Card *) cardAtIndex: (NSUInteger)index;
 
+@property (nonatomic, readonly ) NSString * status;
 @property (nonatomic, readonly) NSInteger score;
 @property (nonatomic ) NSInteger numOfCards;
+
 
 
 @end
