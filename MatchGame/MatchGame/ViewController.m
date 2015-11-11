@@ -30,8 +30,9 @@
 
 @property (weak, nonatomic) IBOutlet UISwitch *matchSwitch;
 
-@end
+@property (weak, nonatomic) IBOutlet UILabel *statusLabe2;
 
+@end
 
 
 
