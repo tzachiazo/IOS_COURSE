@@ -177,6 +177,10 @@
 {
     //bla bla
 }
+-(void)tzachi1:(NSString *)str
+{
+    
+}
 
 
 
