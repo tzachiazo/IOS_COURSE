@@ -168,7 +168,7 @@
     }
 }
 
-- (void) conflictFunction: (NSString * )str
+- (void)conflictFunctio3n: (NSString * )str
 {
     self.game = nil;
 }
