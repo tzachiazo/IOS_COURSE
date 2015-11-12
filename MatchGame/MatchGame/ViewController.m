@@ -152,31 +152,6 @@
     return [UIImage imageNamed:card.isChosen ? @"CardFront" : @"CardBack"];
 }
 
-//this is conflict function! - MASTER
-- (void)conflictFunction1:(NSInteger) i
-{
-    self.game = nil;
-    NSInteger j = i;
-
-    for(int master = 9 ; master < 5 ; master++){
-        NSLog(@"print the master!");
-    }
-    //comments Ex GIT
-    for(NSInteger git = 1 + j; git < 4 ; git++){
-        NSLog(@"--GIT EX123");
-
-    }
-}
-
-- (void)conflictFunctio3n: (NSString * )str
-{
-    self.game = nil;
-}
-
-- (void)Rticha:(NSString*)bla
-{
-    //bla bla
-}
 
 
 

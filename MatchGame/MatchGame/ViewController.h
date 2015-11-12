@@ -10,10 +10,7 @@
 
 @interface ViewController : UIViewController
 
-@property (nonatomic , strong) NSString * str5;
-@property (nonatomic , strong) NSString * str15;
-@property (nonatomic , strong) NSString * str25;
-@property (nonatomic , strong) NSString * str35;
+
 
 @end
 
