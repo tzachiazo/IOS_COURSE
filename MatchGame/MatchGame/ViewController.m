@@ -152,15 +152,22 @@
     return [UIImage imageNamed:card.isChosen ? @"CardFront" : @"CardBack"];
 }
 
+
+- (void)conflictFunction1:(NSInteger) i
+{
+    self.game = nil;
+    NSInteger j = i;
+}
+
 - (void) conflictFunction: (NSString * )str
 {
     self.game = nil;
 }
 
-- (void)Rticha:(NSString*)bla2
+- (void)Rticha:(NSString*)bla
 {
-    //bla bla2
-    self.game = nil;
+    //bla bla
 }
+
 
 @end
