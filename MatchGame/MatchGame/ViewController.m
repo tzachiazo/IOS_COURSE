@@ -157,4 +157,10 @@
     self.game = nil;
 }
 
+- (void)Rticha:(NSString*)bla2
+{
+    //bla bla2
+    self.game = nil;
+}
+
 @end
