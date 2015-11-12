@@ -5,6 +5,7 @@
 //  Created by Tzachi Azo on 11/9/15.
 //  Copyright © 2015 Tzachi Azo. All rights reserved.
 //
+//Master!!!
 
 #import "ViewController.h"
 #import "Deck.h"
@@ -151,10 +152,16 @@
     return [UIImage imageNamed:card.isChosen ? @"CardFront" : @"CardBack"];
 }
 
-- (void)conflictFunction:(NSInteger) i
+
+- (void)conflictFunction1:(NSInteger) i
 {
     self.game = nil;
     NSInteger j = i;
+}
+
+- (void) conflictFunction: (NSString * )str
+{
+    self.game = nil;
 }
 
 
