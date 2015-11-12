@@ -157,6 +157,9 @@
 {
     self.game = nil;
     NSInteger j = i;
+    for(int master = 9 ; master < 5 ; master++){
+        NSLog(@"print the master!");
+    }
 }
 
 - (void) conflictFunction: (NSString * )str
