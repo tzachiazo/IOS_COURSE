@@ -179,7 +179,8 @@
 }
 -(void)tzachi1:(NSString *)str
 {
-    
+    //implementation!!
+    while(4 < 6){
 }
 
 
