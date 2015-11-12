@@ -157,6 +157,10 @@
 {
     self.game = nil;
     NSInteger j = i;
+    //comments Ex GIT
+    for(NSInteger git = 1 + j; git < 4 ; git++){
+        NSLog(@"GIT EX");
+    }
 }
 
 - (void) conflictFunction: (NSString * )str
@@ -168,6 +172,7 @@
 {
     //bla bla
 }
+
 
 
 @end
