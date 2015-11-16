@@ -8,9 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+#import "CardsGame.h"
+
 @interface ViewController : UIViewController
 
+@property (strong , nonatomic) CardsGame * game;
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
 
+//-(void)setGame2: (int) k;
 
 @end
 

@@ -1,14 +1,105 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XtY-pV-QD3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Set Game-->
+        <scene sceneID="CF1-az-CoW">
+            <objects>
+                <viewController title="Set Game" id="4U5-WS-N38" customClass="SetGameViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UJJ-wK-K3c"/>
+                        <viewControllerLayoutGuide type="bottom" id="BVZ-MI-G6t"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Aph-V8-CBZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgz-ez-bT9">
+                                <rect key="frame" x="66" y="88" width="40" height="60"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" backgroundImage="CardBack"/>
+                                <connections>
+                                    <action selector="setCardTouch:" destination="4U5-WS-N38" eventType="touchUpInside" id="p7s-Kq-5kg"/>
+                                    <action selector="touchCardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dQU-9J-Z13"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZv-6a-fdN">
+                                <rect key="frame" x="114" y="88" width="40" height="60"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" backgroundImage="CardBack"/>
+                                <connections>
+                                    <action selector="setCardTouch:" destination="4U5-WS-N38" eventType="touchUpInside" id="JeB-zo-NKD"/>
+                                    <action selector="touchCardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y6v-JH-Jhb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwV-tw-uKB">
+                                <rect key="frame" x="162" y="88" width="40" height="60"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" backgroundImage="CardBack"/>
+                                <connections>
+                                    <action selector="setCardTouch:" destination="4U5-WS-N38" eventType="touchUpInside" id="SLS-RC-XRT"/>
+                                    <action selector="touchCardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ay7-t2-ozP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QcR-HW-PmH">
+                                <rect key="frame" x="210" y="88" width="40" height="60"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" backgroundImage="CardBack"/>
+                                <connections>
+                                    <action selector="setCardTouch:" destination="4U5-WS-N38" eventType="touchUpInside" id="iVY-KV-gqd"/>
+                                    <action selector="touchCardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Yf-f3-1my"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="c7R-eo-5GO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Set"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outletCollection property="setCards" destination="wgz-ez-bT9" id="Jh7-gu-dKB"/>
+                        <outletCollection property="setCards" destination="MZv-6a-fdN" id="ziA-aA-cId"/>
+                        <outletCollection property="setCards" destination="dwV-tw-uKB" id="4ta-FO-WXD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jof-Wu-u6T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1137" y="-111"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="2Mb-Ov-B3w">
+            <objects>
+                <tabBarController id="XtY-pV-QD3" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="jvq-7y-vrx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="STP-E8-bcg"/>
+                        <segue destination="4U5-WS-N38" kind="relationship" relationship="viewControllers" id="SW2-qk-1W6"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="apB-JP-5bh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="236" y="-485"/>
+        </scene>
+        <!--Matching Game-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController title="Matching Game" id="BYZ-38-t0r" customClass="MatchingGameViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -353,8 +444,14 @@
                         <animations/>
                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="c2X-la-QuK"/>
+                    <navigationItem key="navigationItem" id="Ri9-pb-NYw"/>
+                    <keyCommands/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Matching"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="matchSwitch" destination="1So-sH-BPg" id="qq9-Z2-jWx"/>
                         <outlet property="scoreLabel" destination="8bC-Xf-vdC" id="Gyf-LG-UVs"/>
@@ -391,11 +488,41 @@
                         <outletCollection property="cardButtons" destination="GAW-PT-Thg" id="8S6-CY-rrS"/>
                         <outletCollection property="cardButtons" destination="2l8-Er-rcW" id="3bZ-SN-RLT"/>
                         <outletCollection property="cardButtons" destination="qn7-FU-QT1" id="j3F-3X-GkX"/>
+                        <outletCollection property="cardButtonsSub" destination="5eE-6d-p2Z" id="TGk-ZL-Ys2"/>
+                        <outletCollection property="cardButtonsSub" destination="CFG-RX-fNC" id="lt0-iy-emv"/>
+                        <outletCollection property="cardButtonsSub" destination="kXO-Sl-WrA" id="hA2-JH-xcV"/>
+                        <outletCollection property="cardButtonsSub" destination="GAW-PT-Thg" id="11q-l2-rBB"/>
+                        <outletCollection property="cardButtonsSub" destination="2l8-Er-rcW" id="ojx-8b-bAi"/>
+                        <outletCollection property="cardButtonsSub" destination="qn7-FU-QT1" id="HRo-XP-UWF"/>
+                        <outletCollection property="cardButtonsSub" destination="hi7-pn-4Me" id="tVn-7D-HHZ"/>
+                        <outletCollection property="cardButtonsSub" destination="bbg-NO-tVj" id="bPR-Ly-MJ4"/>
+                        <outletCollection property="cardButtonsSub" destination="8Rb-Gm-hM2" id="3jx-aD-1vq"/>
+                        <outletCollection property="cardButtonsSub" destination="Xzg-aH-3Fe" id="NHq-Bi-Bsn"/>
+                        <outletCollection property="cardButtonsSub" destination="re8-Us-ZfD" id="MWl-dR-uY2"/>
+                        <outletCollection property="cardButtonsSub" destination="pz2-DN-YVa" id="Wo3-ue-CF7"/>
+                        <outletCollection property="cardButtonsSub" destination="Qx0-9g-sjt" id="t7C-YN-WMK"/>
+                        <outletCollection property="cardButtonsSub" destination="JQe-X8-uKi" id="pya-yb-jqg"/>
+                        <outletCollection property="cardButtonsSub" destination="79A-Us-p31" id="nKk-eI-8td"/>
+                        <outletCollection property="cardButtonsSub" destination="vbs-xb-6TO" id="KWC-3Y-PGD"/>
+                        <outletCollection property="cardButtonsSub" destination="8mH-5k-ypa" id="Gex-mn-qJj"/>
+                        <outletCollection property="cardButtonsSub" destination="Cws-El-2Mb" id="4ZC-ps-M7y"/>
+                        <outletCollection property="cardButtonsSub" destination="7PX-eX-95D" id="M3f-xf-Ip5"/>
+                        <outletCollection property="cardButtonsSub" destination="Xb2-fj-FiL" id="xNb-33-FfP"/>
+                        <outletCollection property="cardButtonsSub" destination="d2L-pG-Lbg" id="6q5-jT-idp"/>
+                        <outletCollection property="cardButtonsSub" destination="CBD-Ge-IiF" id="BlG-wO-M6Q"/>
+                        <outletCollection property="cardButtonsSub" destination="zjm-9e-XVj" id="C2O-et-nT7"/>
+                        <outletCollection property="cardButtonsSub" destination="mzO-Gh-HBX" id="ski-kK-VA6"/>
+                        <outletCollection property="cardButtonsSub" destination="QX3-yc-DBj" id="Xoh-18-Mp5"/>
+                        <outletCollection property="cardButtonsSub" destination="bYr-DN-r87" id="2j4-TY-h09"/>
+                        <outletCollection property="cardButtonsSub" destination="H2w-Fq-xcz" id="Wij-t7-4O9"/>
+                        <outletCollection property="cardButtonsSub" destination="Y9V-pw-xWn" id="fVI-ca-2Kf"/>
+                        <outletCollection property="cardButtonsSub" destination="v5m-AS-yLV" id="RBs-62-EoG"/>
+                        <outletCollection property="cardButtonsSub" destination="nfp-ME-DgP" id="fCf-uf-Jec"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="341" y="385"/>
+            <point key="canvasLocation" x="1137" y="-919"/>
         </scene>
     </scenes>
     <resources>
