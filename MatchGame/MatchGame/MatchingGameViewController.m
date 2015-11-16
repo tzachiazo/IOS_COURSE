@@ -19,11 +19,31 @@
 
 @implementation MatchingGameViewController
 
+
+
+@synthesize cardButtons = _cardButtons;
+-(NSArray *)cardButtons
+{
+    if(!_cardButtons)
+    {
+        _cardButtons = self.cardButtonsSub;
+    }
+    return _cardButtons;
+}
+
+
+/*
+- (id)init {
+    if (self = [super init]) {
+        self.cardButtons = self.cardButtonsSub;
+    }
+    return self;
+}*/
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.cardButtons = self.cardButtonsSub;
-}
+    }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
