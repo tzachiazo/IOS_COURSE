@@ -20,7 +20,7 @@
 @implementation MatchingGameViewController
 
 
-
+/*
 @synthesize cardButtons = _cardButtons;
 -(NSArray *)cardButtons
 {
@@ -29,20 +29,22 @@
         _cardButtons = self.cardButtonsSub;
     }
     return _cardButtons;
-}
+}*/
 
 
-/*
+
 - (id)init {
     if (self = [super init]) {
-        self.cardButtons = self.cardButtonsSub;
+        self.cardButtonsSup = self.cardButtonsSub;
     }
     return self;
-}*/
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.cardButtonsSup = self.cardButtonsSub;
+
     }
 
 - (void)didReceiveMemoryWarning {
@@ -67,6 +69,8 @@
     return _game;
 
 }
+
+
 /*
 #pragma mark - Navigation
 

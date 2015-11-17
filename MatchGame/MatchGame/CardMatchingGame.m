@@ -38,7 +38,7 @@ static const int COST_TO_CHOOSE = 1;
 
 - (void) chooseCardAtIndex:(NSInteger)index
 {
-    self.status = @"STATUS!!!!";
+    self.status = @"";
     NSMutableArray * openCards;
     openCards = [[NSMutableArray alloc] init];
     

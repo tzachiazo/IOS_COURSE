@@ -13,7 +13,14 @@
 @interface ViewController : UIViewController
 
 @property (strong , nonatomic) CardsGame * game;
-@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtonsSup;
 
+- (IBAction)touchCardButton:(UIButton *)sender;
+
+//-(void) updateUI;
+
+@property (weak, nonatomic) IBOutlet UILabel *scoreLabel2;
+
+@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 @end
 
