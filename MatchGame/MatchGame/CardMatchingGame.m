@@ -9,9 +9,9 @@
 #import "CardMatchingGame.h"
 
 @interface CardMatchingGame()
-@property (nonatomic , readwrite) NSInteger score;
-@property (nonatomic , strong) NSMutableArray *cards; //of cards
-@property (nonatomic, readwrite ) NSString * status;
+//@property (nonatomic , readwrite) NSInteger score;
+//@property (nonatomic , strong) NSMutableArray *cards; //of cards
+//@property (nonatomic, readwrite ) NSString * status;
 
 
 @end
@@ -29,39 +29,8 @@
     _numOfCards = numOfCards;
 }
 
-- (NSMutableArray * )cards
-{
-    if(!_cards){
-        _cards = [[NSMutableArray alloc] init];
-    }
-    return _cards;
-}
 
-- (instancetype)initWithCardCount:(NSUInteger)count usingDeck:(Deck *)deck
-{
-    self = [super init];
-    
-    if(self){
-        for(int i = 0 ; i < count ; i++){
-            Card * card = [deck drawRandomCard];
-            if(card){
-                [self.cards addObject:card];
-            }else{
-                self = nil;
-                break;
-            }
 
-            
-        }
-    }
-    
-    return self;
-}
-
-- (Card *) cardAtIndex:(NSUInteger)index
-{
-    return (index < self.cards.count ) ? self.cards[index] : nil;
-}
 
 static const int MISMATCH_PENALTY = 2;
 static const int MATCH_BONUS  = 4;
@@ -69,7 +38,7 @@ static const int COST_TO_CHOOSE = 1;
 
 - (void) chooseCardAtIndex:(NSInteger)index
 {
-    self.status = @"STATUS!!!!";
+    self.status = @"";
     NSMutableArray * openCards;
     openCards = [[NSMutableArray alloc] init];
     
@@ -96,7 +65,7 @@ static const int COST_TO_CHOOSE = 1;
                 
                 if(matchScore){
                     self.status =
-                    [self.status stringByAppendingString:[NSString stringWithFormat:@" are Matche! and you got %d points" , matchScore * MATCH_BONUS] ];
+                    [self.status stringByAppendingString:[NSString stringWithFormat:@" are Matched! and you got %d points" , matchScore * MATCH_BONUS] ];
                     self.score += matchScore * MATCH_BONUS;
                     //Mark all open cards as Matched
                     for(Card * curCard in openCards){
@@ -105,7 +74,7 @@ static const int COST_TO_CHOOSE = 1;
                     card.matched = YES;
                 }else{
                     
-                    self.status = [self.status stringByAppendingString:@" Are Not Matche!" ];
+                    self.status = [self.status stringByAppendingString:@" Are Not Matched!" ];
                     self.score -= MISMATCH_PENALTY;
                     for(Card * curCard in openCards){
                         curCard.chosen = NO;
@@ -121,23 +90,10 @@ static const int COST_TO_CHOOSE = 1;
             card.chosen = YES;
         }
     }
-    
-    
-    
 }
 
 
--(NSString *)cardArrayToString:(NSMutableArray *)cardArray
-{
-    NSString * ans = @"";
-    
-    for(Card * card in cardArray){
-        ans = [[ans stringByAppendingString:[card contents]] stringByAppendingString:@" "] ;
-    }
-    
-    return ans;
-    
-}
+
 
 
 @end

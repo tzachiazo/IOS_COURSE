@@ -9,31 +9,24 @@
 
 #import "ViewController.h"
 #import "Deck.h"
-#import "PlayingCard.h"
-#import "PlayingCardDeck.h"
-#import "cardMatchingGame.h"
+
+
+//#import "CardsGame.h"
+//#import "PlayingCard.h"
+//#import "PlayingCardDeck.h"
+//#import "cardMatchingGame.h"
 
 @interface ViewController ()
 
-@property (nonatomic, strong) Deck *  mDeck;
-
-@property (nonatomic, strong) PlayingCard *  mpDeck;
 
 @property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
-
-@property (nonatomic) int flipsCounter;
-
-@property (strong , nonatomic) CardMatchingGame * game;
-
-@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
-
 @property (weak, nonatomic) IBOutlet UIView *scoreLabel;
-@property (weak, nonatomic) IBOutlet UILabel *scoreLabel2;
+//@property (weak, nonatomic) IBOutlet UILabel *scoreLabel2;
 
 @property (weak, nonatomic) IBOutlet UISwitch *matchSwitch;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segMatch;
 
-@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
+//@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 
 
 @end
@@ -42,6 +35,25 @@
 
 
 @implementation ViewController
+
+
+@synthesize historyArray = _historyArray;
+
+-(NSMutableArray*)historyArray
+{
+    if(!_historyArray)
+    {
+        _historyArray = [[NSMutableArray alloc] init];
+    }
+    return _historyArray;
+}
+/*
+-(void)setHistoryArray:(NSMutableArray *)historyArray
+{
+    
+}*/
+
+
 - (IBAction)changeCardNum:(UISwitch *)sender {
     if(sender.isOn){
         self.game.numOfCards = 2;
@@ -70,35 +82,6 @@
     [self changeCardNum:self.matchSwitch];
 }
 
-- (CardMatchingGame *)game{
-    if(!_game){
-        _game = [[CardMatchingGame alloc] initWithCardCount:self.cardButtons.count usingDeck:[self createDeck]];
-    }
-    return _game;
-}
-
-- (void)setFlipsCounter : (int)flipsCounter
-{
-    _flipsCounter = flipsCounter;
-    self.flipsLabel.text = [NSString stringWithFormat:@"%d flips!" ,self.flipsCounter];
-}
-
-- (Deck *)mDeck
-{
-    if(!_mDeck)
-    {
-        _mDeck = [self createDeck];
-    }
-    
-    return _mDeck;
-}
-
--(Deck *) createDeck
-{
-    return [[PlayingCardDeck alloc] init];
-}
-- (IBAction)jjj:(id)sender {
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -110,26 +93,27 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)touchCardButton:(UIButton *)sender {
-      self.game.numOfCards = (self.matchSwitch.on)? 2 : 3;
+    
+    self.game.numOfCards = (self.matchSwitch.on)? 2 : 3;
     self.matchSwitch.enabled = NO;
     self.segMatch.enabled = NO;
-    NSUInteger choosenIndex = [self.cardButtons indexOfObject:sender];
+    NSUInteger choosenIndex = [self.cardButtonsSup indexOfObject:sender];
     [self.game chooseCardAtIndex:choosenIndex];
     [self updateUI];
-    self.flipsCounter++;
 }
 - (IBAction)ReDeal:(UIButton *)sender {
     self.matchSwitch.enabled = YES;
     self.segMatch.enabled = YES;
     self.game = nil;
-    self.game.numOfCards = (self.matchSwitch.on)? 2 : 3;
+    //self.game.numOfCards = (self.matchSwitch.on)? 2 : 3;
     [self updateUI];
 }
 
+
 -(void) updateUI
 {
-    for(UIButton * curButton in self.cardButtons){
-        NSInteger index = [self.cardButtons indexOfObject:curButton];
+    for(UIButton * curButton in self.cardButtonsSup){
+        NSInteger index = [self.cardButtonsSup indexOfObject:curButton];
         Card* card = [self.game cardAtIndex:index];
         
         [curButton setTitle:[self titleForCard:card] forState:UIControlStateNormal];
@@ -145,11 +129,13 @@
 
 - (NSString *) titleForCard:(Card *) card{
     return (card.isChosen)? card.contents : @"";
+   // return (card.isChosen)? card.contents : card.contents;
 }
 
 - (UIImage *) backgroundImageToCard:(Card *) card
 {
     return [UIImage imageNamed:card.isChosen ? @"CardFront" : @"CardBack"];
+    // return [UIImage imageNamed:card.isChosen ? @"CardFront" : @"CardFront"];
 }
 
 

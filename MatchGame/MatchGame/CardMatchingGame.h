@@ -9,17 +9,20 @@
 #import <Foundation/Foundation.h>
 #import "Deck.h"
 #import "Card.h"
+#import "CardsGame.h"
 
-@interface CardMatchingGame : NSObject
+@interface CardMatchingGame : CardsGame
 
-- (instancetype) initWithCardCount: (NSUInteger)count usingDeck:(Deck *) deck;
+//- (instancetype) initWithCardCount: (NSUInteger)count usingDeck:(Deck *) deck;
 
-- (void) chooseCardAtIndex: (NSInteger)index;
-- (Card *) cardAtIndex: (NSUInteger)index;
+//- (void) chooseCardAtIndex: (NSInteger)index;
+//- (Card *) cardAtIndex: (NSUInteger)index;
 
-@property (nonatomic, readonly ) NSString * status;
-@property (nonatomic, readonly) NSInteger score;
-@property (nonatomic ) NSInteger numOfCards;
+//@property (nonatomic, readonly ) NSString * status;
+//@property (nonatomic, readonly) NSInteger score;
+//@property (nonatomic ) NSInteger numOfCards;
+
+
 
 
 
