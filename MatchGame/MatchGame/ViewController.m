@@ -37,6 +37,23 @@
 @implementation ViewController
 
 
+@synthesize historyArray = _historyArray;
+
+-(NSMutableArray*)historyArray
+{
+    if(!_historyArray)
+    {
+        _historyArray = [[NSMutableArray alloc] init];
+    }
+    return _historyArray;
+}
+/*
+-(void)setHistoryArray:(NSMutableArray *)historyArray
+{
+    
+}*/
+
+
 - (IBAction)changeCardNum:(UISwitch *)sender {
     if(sender.isOn){
         self.game.numOfCards = 2;

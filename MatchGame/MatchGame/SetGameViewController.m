@@ -25,6 +25,8 @@
 @synthesize cardButtonsSup = _cardButtonsSup;
 
 
+
+
 -(NSArray *)cardButtonsSup
 {
     if(!_cardButtonsSup)
@@ -38,6 +40,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self updateUI];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -74,6 +77,7 @@
         
         NSMutableAttributedString *atr = [[NSMutableAttributedString alloc] initWithString:card.contents];
         
+        
         [atr addAttributes: @{
                               NSStrokeWidthAttributeName :@"-4",
                               NSForegroundColorAttributeName : ((SetCard*)card).color,
@@ -92,11 +96,28 @@
             [curButton.layer setBorderColor:[[UIColor blackColor] CGColor]];
         }
         
-        
+        NSArray * a = [[NSArray alloc] init];
+        [a firstObject];
         self.scoreLabel.text= [NSString stringWithFormat:@"Score: %ld" ,self.game.score];
     }
     
     self.statusBar.text = self.game.status;
+    //
+    if(self.game.status && ![self.game.status isEqualToString:@""])
+    {
+        [self.historyArray addObject:[NSString stringWithString :self.game.status]];
+        //self.historySlider setMaximumValue:
+        self.historySlider.maximumValue = self.historyArray.count -1;
+        self.historySlider.value = self.historySlider.maximumValue;
+    }
+  
+   
+}
+- (IBAction)onHistorySlide:(UISlider *)sender {
+
+    int msgIndex = sender.value;
+   
+    self.statusBar.text = (self.historyArray.count == 0)? @"" : self.historyArray[msgIndex];
     
 }
 

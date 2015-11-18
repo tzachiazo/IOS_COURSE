@@ -22,5 +22,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel2;
 
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
+@property (weak, nonatomic) IBOutlet UITextField *textview;
+
+@property (strong , nonatomic) NSMutableArray * historyArray;
 @end
 

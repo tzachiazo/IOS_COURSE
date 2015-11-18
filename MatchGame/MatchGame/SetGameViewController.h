@@ -10,5 +10,6 @@
 #import "viewController.h"
 
 @interface SetGameViewController : ViewController
+@property (weak, nonatomic) IBOutlet UISlider *historySlider;
 
 @end

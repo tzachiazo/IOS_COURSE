@@ -258,7 +258,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8IY-vp-hoo">
-                                <rect key="frame" x="15" y="426" width="352" height="21"/>
+                                <rect key="frame" x="15" y="428" width="352" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -266,7 +266,7 @@
                                 <color key="shadowColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJe-Nh-Zvu">
-                                <rect key="frame" x="15" y="464" width="161" height="36"/>
+                                <rect key="frame" x="15" y="517" width="161" height="36"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -275,7 +275,7 @@
                                 <size key="shadowOffset" width="-1" height="-1"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udV-Vh-nj0">
-                                <rect key="frame" x="125" y="508" width="133" height="71"/>
+                                <rect key="frame" x="141" y="502" width="133" height="71"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <size key="titleShadowOffset" width="1" height="2"/>
@@ -287,6 +287,13 @@
                                     <action selector="ReDeal:" destination="4U5-WS-N38" eventType="touchUpInside" id="7uA-0g-lm0"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="6vd-Z1-aZh">
+                                <rect key="frame" x="12" y="457" width="190" height="31"/>
+                                <animations/>
+                                <connections>
+                                    <action selector="onHistorySlide:" destination="4U5-WS-N38" eventType="valueChanged" id="yMh-gg-rKp"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -297,6 +304,7 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="title" value="Set"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <outlet property="historySlider" destination="6vd-Z1-aZh" id="mYk-Qc-Ntp"/>
                         <outlet property="lblT" destination="8IY-vp-hoo" id="lux-Ua-AWk"/>
                         <outlet property="scoreLabel" destination="jJe-Nh-Zvu" id="ZqM-kL-AfQ"/>
                         <outlet property="statusBar" destination="8IY-vp-hoo" id="RIc-Xu-RXG"/>

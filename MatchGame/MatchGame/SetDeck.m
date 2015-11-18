@@ -29,6 +29,17 @@
                     for(int j = 1 ; j <= i ; j++){
                         card.cardValue =  [card.cardValue stringByAppendingString:shape];
                     }
+                    ////////
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    //////////
+                    
                     [self addCard:card];
                 }
               

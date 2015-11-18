@@ -65,7 +65,7 @@ static const int COST_TO_CHOOSE = 1;
                 
                 if(matchScore){
                     self.status =
-                    [self.status stringByAppendingString:[NSString stringWithFormat:@" are Matche! and you got %d points" , matchScore * MATCH_BONUS] ];
+                    [self.status stringByAppendingString:[NSString stringWithFormat:@" are Matched! and you got %d points" , matchScore * MATCH_BONUS] ];
                     self.score += matchScore * MATCH_BONUS;
                     //Mark all open cards as Matched
                     for(Card * curCard in openCards){
@@ -74,7 +74,7 @@ static const int COST_TO_CHOOSE = 1;
                     card.matched = YES;
                 }else{
                     
-                    self.status = [self.status stringByAppendingString:@" Are Not Matche!" ];
+                    self.status = [self.status stringByAppendingString:@" Are Not Matched!" ];
                     self.score -= MISMATCH_PENALTY;
                     for(Card * curCard in openCards){
                         curCard.chosen = NO;

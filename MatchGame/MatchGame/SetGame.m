@@ -26,9 +26,9 @@ static const int MISMATCH_PENALTY = 4;
     
     if(card.isChosen){
         card.chosen = NO;
-        self.status = [@"Flip back card: " stringByAppendingString:card.contents];
+        self.status = [@"unchoosed Card: " stringByAppendingString:card.contents];
     }else{
-        
+        self.status = [@"Choosed Card: " stringByAppendingString:card.contents];
         for(Card *otherCard in self.cards){
             if(otherCard.chosen == YES)
             {// && otherCard.isMatched == NO){
@@ -42,14 +42,13 @@ static const int MISMATCH_PENALTY = 4;
       
             if(matchScore){
                 self.status = [@"It's a Match, Extra points: " stringByAppendingString:[NSString stringWithFormat:@"%d" ,(matchScore * 4)]];
-                self.score += matchScore * 4;
+                self.score += matchScore * 8;
                
             }else{
                 self.status = @"No Match!!!";
-                self.status = [self.status stringByAppendingString:@" Are Not Matche!" ];
+                self.status = [self.status stringByAppendingString:@" Are Not Matched!" ];
                 self.score -= MISMATCH_PENALTY;
-                
-                //return;
+    
             }
             
             for(Card * curCard in openCards){
