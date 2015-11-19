@@ -10,6 +10,7 @@
 #import "SetDeck.h"
 #import "SetGame.h"
 #import "SetCard.h"
+#import "SetCardView.h"
 
 @interface SetGameViewController ()
 
@@ -17,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblT;
 @property (weak, nonatomic) IBOutlet UILabel *statusBar;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
+@property (strong, nonatomic) IBOutletCollection(SetCardView) NSArray *setCardsBoard;
 @end
 
 @implementation SetGameViewController
@@ -41,6 +43,14 @@
     // Do any additional setup after loading the view.
     [self updateUI];
 
+    for(SetCardView * card in self.setCardsBoard){
+        card.shapeNumber = 0;
+        card.color = [UIColor yellowColor];
+        card.numShapesInCard = 3;
+    }
+    //card.shapeNumber = 0;
+    //card.color = [UIColor greenColor];
+   // card.numShapesInCard = 3;
 }
 
 - (void)didReceiveMemoryWarning {

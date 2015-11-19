@@ -9,11 +9,16 @@
 #import "MatchingGameViewController.h"
 #import "PlayingCardDeck.h"
 #import "CardMatchingGame.h"
+#import "cardView.h"
+#import "setCardView.h"
 
 @interface MatchingGameViewController ()
 
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtonsSub;
 
+@property (strong, nonatomic) IBOutletCollection(UIView) NSArray *CardsView;
+
+@property (strong, nonatomic) IBOutletCollection(SetCardView) NSArray *myCards;
 
 @end
 
@@ -31,6 +36,24 @@
     return _cardButtons;
 }*/
 
+-(void) setup
+{
+    
+    
+}
+
+-(void) awakeFromNib
+{
+    [self setup];
+}
+/*
+-(id)initWithFrame:(CGRect)aRect
+{
+   // self = [super initWithFrame:aRect];
+  //  [self setup];
+  //  return self;
+    
+}*/
 
 
 - (id)init {
@@ -44,6 +67,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.cardButtonsSup = self.cardButtonsSub;
+    //self.myCard.rank = 4;
+    //self.myCard.suit = @"♣️";
+    
+    for(SetCardView * card in self.myCards){
+        card.shapeNumber = 0;
+        card.color = [UIColor greenColor];
+        card.numShapesInCard = 3;
+    }
 
     }
 
