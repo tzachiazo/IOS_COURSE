@@ -26,68 +26,8 @@
                                 <color key="shadowColor" red="0.22236132019999999" green="1" blue="0.49593917920000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="-1" height="-1"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TB0-Po-Zwd" customClass="SetCardView">
-                                <rect key="frame" x="69" y="60" width="57" height="80"/>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5ef-qo-61s" customClass="SetCardView">
-                                <rect key="frame" x="138" y="60" width="57" height="80"/>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c7V-x0-yEA" customClass="SetCardView">
-                                <rect key="frame" x="207" y="60" width="57" height="80"/>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7tn-ec-5hs" customClass="SetCardView">
-                                <rect key="frame" x="276" y="60" width="57" height="80"/>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zbj-Po-i9v" customClass="SetCardView">
-                                <rect key="frame" x="69" y="153" width="57" height="80"/>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SCc-PP-gLM" customClass="SetCardView">
-                                <rect key="frame" x="138" y="153" width="57" height="80"/>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YSt-Xu-saD" customClass="SetCardView">
-                                <rect key="frame" x="207" y="153" width="57" height="80"/>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SNE-rh-GJN" customClass="SetCardView">
-                                <rect key="frame" x="276" y="153" width="57" height="80"/>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="azj-6e-l6X" customClass="SetCardView">
-                                <rect key="frame" x="69" y="247" width="57" height="80"/>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uVl-Tc-8ut" customClass="SetCardView">
-                                <rect key="frame" x="138" y="247" width="57" height="80"/>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="etS-wF-Yfe" customClass="SetCardView">
-                                <rect key="frame" x="207" y="247" width="57" height="80"/>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="otC-qS-Se5" customClass="SetCardView">
-                                <rect key="frame" x="276" y="247" width="57" height="80"/>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udV-Vh-nj0">
-                                <rect key="frame" x="271" y="348" width="133" height="71"/>
+                                <rect key="frame" x="213" y="349" width="142" height="67.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <size key="titleShadowOffset" width="1" height="2"/>
@@ -99,9 +39,125 @@
                                     <action selector="ReDeal:" destination="4U5-WS-N38" eventType="touchUpInside" id="7uA-0g-lm0"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ocl-Uq-M8A">
+                                <rect key="frame" x="46" y="36" width="288" height="293"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TB0-Po-Zwd" customClass="SetCardView">
+                                        <rect key="frame" x="16" y="18" width="57" height="80"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="MWl-Gq-qr1" appends="YES" id="TiC-el-cAu"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5ef-qo-61s" customClass="SetCardView">
+                                        <rect key="frame" x="85" y="18" width="57" height="80"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="zsE-GP-k8V" appends="YES" id="16m-c6-iBq"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c7V-x0-yEA" customClass="SetCardView">
+                                        <rect key="frame" x="154" y="18" width="57" height="80"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="Q7p-Me-gWd" appends="YES" id="PJZ-Wx-nHM"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7tn-ec-5hs" customClass="SetCardView">
+                                        <rect key="frame" x="223" y="18" width="57" height="80"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="1Xd-n3-VXU" appends="YES" id="9L2-2X-uXM"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zbj-Po-i9v" customClass="SetCardView">
+                                        <rect key="frame" x="16" y="111" width="57" height="80"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="0k3-ir-Xcf" appends="YES" id="bvC-vo-OEx"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SCc-PP-gLM" customClass="SetCardView">
+                                        <rect key="frame" x="85" y="111" width="57" height="80"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="TQV-gB-xaG" appends="YES" id="7Dk-Fn-Wmc"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YSt-Xu-saD" customClass="SetCardView">
+                                        <rect key="frame" x="154" y="111" width="57" height="80"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="J1f-1e-0E4" appends="YES" id="hd1-Bd-pZN"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SNE-rh-GJN" customClass="SetCardView">
+                                        <rect key="frame" x="223" y="111" width="57" height="80"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="FKT-lP-ta2" appends="YES" id="YdC-Qe-kkQ"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="azj-6e-l6X" customClass="SetCardView">
+                                        <rect key="frame" x="16" y="205" width="57" height="80"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="F8j-0v-x9C" appends="YES" id="evR-vN-46u"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uVl-Tc-8ut" customClass="SetCardView">
+                                        <rect key="frame" x="85" y="205" width="57" height="80"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="hag-2H-Kay" appends="YES" id="0Bh-hL-d2F"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="etS-wF-Yfe" customClass="SetCardView">
+                                        <rect key="frame" x="154" y="205" width="57" height="80"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="VIp-S5-ub5" appends="YES" id="hoV-Ne-D7Z"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="otC-qS-Se5" customClass="SetCardView">
+                                        <rect key="frame" x="223" y="205" width="57" height="80"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="eFp-pu-1m5" appends="YES" id="2q1-Bv-rpd"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="c7R-eo-5GO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
@@ -125,8 +181,68 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jof-Wu-u6T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="MWl-Gq-qr1">
+                    <connections>
+                        <action selector="flippingCard:" destination="4U5-WS-N38" id="HwO-8F-JNC"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="zsE-GP-k8V">
+                    <connections>
+                        <action selector="flippingCard:" destination="4U5-WS-N38" id="k4b-P1-dhX"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Q7p-Me-gWd">
+                    <connections>
+                        <action selector="flippingCard:" destination="4U5-WS-N38" id="QTV-aU-yOG"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="1Xd-n3-VXU">
+                    <connections>
+                        <action selector="flippingCard:" destination="4U5-WS-N38" id="AEk-dw-bHB"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="0k3-ir-Xcf">
+                    <connections>
+                        <action selector="flippingCard:" destination="4U5-WS-N38" id="O80-7J-680"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="TQV-gB-xaG">
+                    <connections>
+                        <action selector="flippingCard:" destination="4U5-WS-N38" id="QX6-rM-6Dw"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="J1f-1e-0E4">
+                    <connections>
+                        <action selector="flippingCard:" destination="4U5-WS-N38" id="SmN-E1-Ohd"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="FKT-lP-ta2">
+                    <connections>
+                        <action selector="flippingCard:" destination="4U5-WS-N38" id="BzB-2X-O80"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="F8j-0v-x9C">
+                    <connections>
+                        <action selector="flippingCard:" destination="4U5-WS-N38" id="sOH-uv-TtY"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="hag-2H-Kay">
+                    <connections>
+                        <action selector="flippingCard:" destination="4U5-WS-N38" id="osJ-o2-ZwD"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="VIp-S5-ub5">
+                    <connections>
+                        <action selector="flippingCard:" destination="4U5-WS-N38" id="RqS-Ge-622"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="eFp-pu-1m5">
+                    <connections>
+                        <action selector="flippingCard:" destination="4U5-WS-N38" id="dMk-lW-wcr"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1137" y="-111"/>
+            <point key="canvasLocation" x="913" y="-131"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="2Mb-Ov-B3w">
@@ -452,13 +568,13 @@
                                     <action selector="ReDeal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c3I-nq-GbR"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gh3-I9-vG2" customClass="SetCardView">
-                                <rect key="frame" x="201" y="482" width="49" height="59"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0aN-4L-tth" customClass="SetCardView">
+                                <rect key="frame" x="88" y="432" width="120" height="167"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0aN-4L-tth" customClass="SetCardView">
-                                <rect key="frame" x="56" y="441" width="130" height="210"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gh3-I9-vG2" customClass="SetCardView">
+                                <rect key="frame" x="266" y="473" width="49" height="59"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>

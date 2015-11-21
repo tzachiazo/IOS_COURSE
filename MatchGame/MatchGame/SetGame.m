@@ -24,7 +24,7 @@ static const int MISMATCH_PENALTY = 4;
     Card * card = [self cardAtIndex:index];
     
     
-    if(card.isChosen){
+    if(card.chosen){
         card.chosen = NO;
         self.status = [@"unchoosed Card: " stringByAppendingString:card.contents];
     }else{
@@ -43,6 +43,14 @@ static const int MISMATCH_PENALTY = 4;
             if(matchScore){
                 self.status = [@"It's a Match, Extra points: " stringByAppendingString:[NSString stringWithFormat:@"%d" ,(matchScore * 4)]];
                 self.score += matchScore * 8;
+                
+                card.matched = YES;
+                
+                for(Card * otherCard in openCards){
+                    otherCard.matched = YES;
+                }
+                
+                
                
             }else{
                 self.status = @"No Match!!!";

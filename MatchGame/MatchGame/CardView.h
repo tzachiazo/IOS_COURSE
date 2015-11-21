@@ -13,6 +13,7 @@
 
 @property (nonatomic) NSUInteger rank;
 @property (nonatomic) NSString* suit;
+@property (nonatomic) BOOL isChoosen;
 
 @property (nonatomic) bool faceUp;
 

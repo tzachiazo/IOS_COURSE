@@ -15,6 +15,8 @@
 @property (strong , nonatomic) CardsGame * game;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtonsSup;
 
+
+
 - (IBAction)touchCardButton:(UIButton *)sender;
 
 //-(void) updateUI;

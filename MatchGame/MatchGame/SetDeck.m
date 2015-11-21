@@ -18,35 +18,25 @@
     if(self = [super init])
     {
         
-        for(NSString * shape in [SetCard validShapes])
+        //loop for 3 shapes!
+        for(int shape = 0 ; shape < 3 ; shape++)
         {
-            for( UIColor * color in [SetCard validColors])
+            //loops for 3 colors
+            for(int color = 0 ; color < 3 ; color++)
             {
-                for(int i = 1 ; i <= 3 ; i++){
+                //loops for 3 numbers
+                for(int num = 1 ; num <= 3 ; num++)
+                {
                     SetCard * card = [[SetCard alloc] init];
-                    card.cardValue = @"";
-                    card.color = color;
-                    for(int j = 1 ; j <= i ; j++){
-                        card.cardValue =  [card.cardValue stringByAppendingString:shape];
-                    }
-                    ////////
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    //////////
+                    card.shapeID = shape;
+                    card.colorId = color;
+                    card.numberOfShapesInCard = num;
                     
                     [self addCard:card];
                 }
               
             }
         }
-        
-        
     }
     
     return self;

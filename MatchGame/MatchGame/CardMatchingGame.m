@@ -44,14 +44,14 @@ static const int COST_TO_CHOOSE = 1;
     
     Card * card = [self cardAtIndex:index];
     
-    if(!card.isMatched){
-        if(card.isChosen){
+    if(!card.matched){
+        if(card.chosen){
             card.chosen = NO;
             self.status = [@"Flip back card: " stringByAppendingString:card.contents];
         }else{
             
             for(Card *otherCard in self.cards){
-                if(otherCard.chosen == YES && otherCard.isMatched == NO){
+                if(otherCard.chosen == YES && otherCard.matched == NO){
                     [openCards addObject:otherCard];
                 }
             }

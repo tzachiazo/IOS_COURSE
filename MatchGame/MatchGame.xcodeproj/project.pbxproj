@@ -12,7 +12,6 @@
 		7046AD411BF0D6720030C846 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7046AD401BF0D6720030C846 /* ViewController.m */; };
 		7046AD441BF0D6720030C846 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7046AD421BF0D6720030C846 /* Main.storyboard */; };
 		7046AD461BF0D6720030C846 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7046AD451BF0D6720030C846 /* Assets.xcassets */; };
-		7046AD491BF0D6720030C846 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7046AD471BF0D6720030C846 /* LaunchScreen.storyboard */; };
 		7046AD541BF0D6720030C846 /* MatchGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7046AD531BF0D6720030C846 /* MatchGameTests.m */; };
 		7046AD5F1BF0D6720030C846 /* MatchGameUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7046AD5E1BF0D6720030C846 /* MatchGameUITests.m */; };
 		7046AD6E1BF0D7510030C846 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 7046AD6D1BF0D7510030C846 /* Card.m */; };
@@ -57,7 +56,6 @@
 		7046AD401BF0D6720030C846 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		7046AD431BF0D6720030C846 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7046AD451BF0D6720030C846 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7046AD481BF0D6720030C846 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7046AD4A1BF0D6720030C846 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7046AD4F1BF0D6720030C846 /* MatchGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MatchGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7046AD531BF0D6720030C846 /* MatchGameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MatchGameTests.m; sourceTree = "<group>"; };
@@ -161,7 +159,6 @@
 				70A997BC1BF9DC3100ECF571 /* MatchingGameViewController.h */,
 				70A997BD1BF9DC3100ECF571 /* MatchingGameViewController.m */,
 				7046AD451BF0D6720030C846 /* Assets.xcassets */,
-				7046AD471BF0D6720030C846 /* LaunchScreen.storyboard */,
 				7046AD4A1BF0D6720030C846 /* Info.plist */,
 				7046AD391BF0D6720030C846 /* Supporting Files */,
 				7046AD6C1BF0D7510030C846 /* Card.h */,
@@ -313,7 +310,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7046AD491BF0D6720030C846 /* LaunchScreen.storyboard in Resources */,
 				7046AD461BF0D6720030C846 /* Assets.xcassets in Resources */,
 				7046AD441BF0D6720030C846 /* Main.storyboard in Resources */,
 			);
@@ -398,14 +394,6 @@
 				7046AD431BF0D6720030C846 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		7046AD471BF0D6720030C846 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7046AD481BF0D6720030C846 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

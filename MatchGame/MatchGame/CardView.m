@@ -53,7 +53,9 @@
    [[UIColor whiteColor] setFill];
     UIRectFill(self.bounds);
     
-    [[UIColor blackColor] setStroke];
+    UIColor* color = (self.isChoosen)? [UIColor redColor] : [UIColor blackColor];
+    [color setStroke];
+    
     [roundRect stroke];
     
     //[self drawCorner];

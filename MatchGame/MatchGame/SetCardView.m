@@ -28,6 +28,17 @@
 -(CGFloat) getShapeRatio{ return STANDART_HEIGHT/STANDART_SHAPE_WIDTH;}
 
 
+-(void)setColor:(UIColor *)color
+{
+    _color = color;
+    [self setNeedsDisplay];
+}
+
+-(void)setShapeNumber:(NSInteger)shapeNumber
+{
+    _shapeNumber = shapeNumber;
+    [self setNeedsDisplay];
+}
 -(void)drawContent
 {
     switch (self.shapeNumber) {
@@ -60,7 +71,7 @@
         [path addLineToPoint:CGPointMake([self getStartingPointX:i] + BASE_SIZE ,[self getStartingPointY:i] + BASE_SIZE )];
         [path closePath];
         
-        [[UIColor greenColor] setFill];
+        [self.color setFill];
         [[UIColor blackColor] setStroke];
         
         [path fill];
@@ -79,10 +90,10 @@
         UIBezierPath * myRect = [UIBezierPath bezierPathWithRect:CGRectMake([self getStartingPointX:i], [self getStartingPointY:i], BASE_SIZE, BASE_SIZE) ];
         
         [self.color setFill];
-        [self.color setStroke];
+        [[UIColor blackColor] setStroke];
         
         [myRect fill];
-        [[UIColor blackColor] setStroke];
+        [myRect stroke];
         
         [myRect addClip];
         CGContextRestoreGState(mainContext);
@@ -96,7 +107,7 @@
     for(int i = 1 ; i <= self.numShapesInCard ; i++){
         CGContextSaveGState(mainContext);
         UIBezierPath *myCyrcle = [UIBezierPath bezierPathWithOvalInRect:CGRectMake([self getStartingPointX:i], [self getStartingPointY:i], BASE_SIZE, BASE_SIZE)];
-        [[UIColor greenColor] setFill];
+        [self.color setFill];
         [[UIColor blackColor] setStroke];
         
         [myCyrcle fill];

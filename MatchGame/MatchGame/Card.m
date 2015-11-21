@@ -24,4 +24,9 @@
     return score;
 }
 
+-(void)SetIsMatched:(BOOL)matched
+{
+    _matched = matched;
+}
+
 @end

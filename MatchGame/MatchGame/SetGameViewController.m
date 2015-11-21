@@ -14,7 +14,7 @@
 
 @interface SetGameViewController ()
 
-@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *setCards;
+//@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *setCards;
 @property (weak, nonatomic) IBOutlet UILabel *lblT;
 @property (weak, nonatomic) IBOutlet UILabel *statusBar;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
@@ -33,7 +33,7 @@
 {
     if(!_cardButtonsSup)
     {
-        _cardButtonsSup = self.setCards;
+       // _cardButtonsSup = self.setCards;
     }
     return _cardButtonsSup;
 }
@@ -42,15 +42,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self updateUI];
-
-    for(SetCardView * card in self.setCardsBoard){
-        card.shapeNumber = 0;
-        card.color = [UIColor yellowColor];
-        card.numShapesInCard = 3;
-    }
-    //card.shapeNumber = 0;
-    //card.color = [UIColor greenColor];
-   // card.numShapesInCard = 3;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -63,11 +54,20 @@
 - (CardsGame *)game{
     if(!_game)
     {
-        _game = [[SetGame alloc] initWithCardCount:self.setCards.count usingDeck:[self createDeck]];
+        _game = [[SetGame alloc] initWithCardCount:self.setCardsBoard.count usingDeck:[self createDeck]];
     }
     
     return _game;
     
+}
+
+
+
+- (IBAction)flippingCard:(UITapGestureRecognizer *)sender {
+    
+    NSUInteger choosenIndex = [self.setCardsBoard indexOfObject:sender.view];
+    [self.game chooseCardAtIndex:choosenIndex];
+    [self updateUI];
 }
 
 -(Deck *) createDeck
@@ -77,49 +77,27 @@
 
 -(void) updateUI
 {
-    for(UIButton * curButton in self.setCards){
-        NSInteger index = [self.cardButtonsSup indexOfObject:curButton];
-        Card* card = [self.game cardAtIndex:index];
+    for(SetCardView * cardView in self.setCardsBoard){
+        NSInteger index = [self.setCardsBoard indexOfObject:cardView];
+        SetCard* card = (SetCard *)([self.game cardAtIndex:index]);
+    
+       
+        cardView.isChoosen = card.chosen;
+        cardView.numShapesInCard = card.numberOfShapesInCard;
+        cardView.shapeNumber = card.shapeID;
+        cardView.color = @[[UIColor redColor] , [UIColor blueColor] , [UIColor greenColor] ][card.colorId];
         
-        [curButton setTitle:[card contents] forState:UIControlStateNormal];
-        [curButton setBackgroundImage:[UIImage imageNamed:@"CardFront"] forState:UIControlStateNormal];
-        curButton.enabled = !card.isMatched;
-        
-        NSMutableAttributedString *atr = [[NSMutableAttributedString alloc] initWithString:card.contents];
-        
-        
-        [atr addAttributes: @{
-                              NSStrokeWidthAttributeName :@"-4",
-                              NSForegroundColorAttributeName : ((SetCard*)card).color,
-                              
-                              
-                              }
-                     range:NSMakeRange(0, [card.contents length])];
-        
-        
-        [curButton setAttributedTitle:atr forState:UIControlStateNormal];
-        if(card.isChosen){
-            [curButton.layer setBorderWidth:3.0];
-            [curButton.layer setBorderColor:[[UIColor blueColor] CGColor]];
+        if(card.matched){
+            [cardView setAlpha:0];
         }else{
-            [curButton.layer setBorderWidth:0.0];
-            [curButton.layer setBorderColor:[[UIColor blackColor] CGColor]];
+            [cardView setAlpha:1];
         }
-        
-        NSArray * a = [[NSArray alloc] init];
-        [a firstObject];
         self.scoreLabel.text= [NSString stringWithFormat:@"Score: %ld" ,self.game.score];
     }
     
     self.statusBar.text = self.game.status;
-    //
-    if(self.game.status && ![self.game.status isEqualToString:@""])
-    {
-        [self.historyArray addObject:[NSString stringWithString :self.game.status]];
-        //self.historySlider setMaximumValue:
-        self.historySlider.maximumValue = self.historyArray.count -1;
-        self.historySlider.value = self.historySlider.maximumValue;
-    }
+    
+    
   
    
 }

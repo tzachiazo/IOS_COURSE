@@ -93,17 +93,11 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)touchCardButton:(UIButton *)sender {
-    
-    self.game.numOfCards = (self.matchSwitch.on)? 2 : 3;
-    self.matchSwitch.enabled = NO;
-    self.segMatch.enabled = NO;
     NSUInteger choosenIndex = [self.cardButtonsSup indexOfObject:sender];
     [self.game chooseCardAtIndex:choosenIndex];
     [self updateUI];
 }
 - (IBAction)ReDeal:(UIButton *)sender {
-    self.matchSwitch.enabled = YES;
-    self.segMatch.enabled = YES;
     self.game = nil;
     //self.game.numOfCards = (self.matchSwitch.on)? 2 : 3;
     [self updateUI];
@@ -118,7 +112,7 @@
         
         [curButton setTitle:[self titleForCard:card] forState:UIControlStateNormal];
         [curButton setBackgroundImage:[self backgroundImageToCard:card] forState:UIControlStateNormal];
-        curButton.enabled = !card.isMatched;
+        curButton.enabled = !card.matched;
         self.scoreLabel2.text= [NSString stringWithFormat:@"Score: %ld" ,self.game.score];
     }
     
@@ -128,13 +122,13 @@
 
 
 - (NSString *) titleForCard:(Card *) card{
-    return (card.isChosen)? card.contents : @"";
+    return (card.chosen)? card.contents : @"";
    // return (card.isChosen)? card.contents : card.contents;
 }
 
 - (UIImage *) backgroundImageToCard:(Card *) card
 {
-    return [UIImage imageNamed:card.isChosen ? @"CardFront" : @"CardBack"];
+    return [UIImage imageNamed:card.chosen ? @"CardFront" : @"CardBack"];
     // return [UIImage imageNamed:card.isChosen ? @"CardFront" : @"CardFront"];
 }
 

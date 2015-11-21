@@ -11,20 +11,14 @@
 
 @interface SetCard : Card
 
-@property (nonatomic) NSString * cardValue;
 
-@property (nonatomic) UIColor * color;
-//@property (nonatomic) UIColor * shading;
-//@property (nonatomic) NSInteger * number;
-//@property (nonatomic) NSString * shape;
-
-//@property (nonatomic) NSInteger* rank;
-
-@property (nonatomic) NSInteger * maxObjects;
+@property (nonatomic) NSInteger shapeID;
+@property (nonatomic) NSInteger colorId;
+@property (nonatomic) NSInteger numberOfShapesInCard;
 
 
-+ (NSArray *) validColors;
-+ (NSArray *) validShapes;
+@property (nonatomic) NSInteger maxObjects;
+
 
 
 @end
