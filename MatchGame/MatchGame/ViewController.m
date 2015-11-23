@@ -114,11 +114,6 @@
     self.game = nil;
     //self.game.numOfCards = (self.matchSwitch.on)? 2 : 3;
     [self updateUI];
-    
-    
-    
- 
-    
 }
 
 

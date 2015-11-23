@@ -28,7 +28,15 @@
 @synthesize cardButtonsSup = _cardButtonsSup;
 
 
-
+-(NSMutableArray*)setCardsBoard
+{
+    if(!_setCardsBoard)
+    {
+        _setCardsBoard = [[NSMutableArray alloc] init];
+    }
+    
+    return _setCardsBoard;
+}
 
 -(NSArray *)cardButtonsSup
 {
@@ -53,6 +61,11 @@
 {
     [self updateUI];
 
+}
+- (IBAction)reDeal:(UIButton *)sender {
+    self.game = nil;
+    [self add12Cards];
+    [self updateUI];
 }
 
 -(UIAttachmentBehavior * ) attach
@@ -136,6 +149,7 @@
 - (IBAction)goButton:(UIButton *)sender {
     
     //[UIView animateWithDuration:3 delay:0 options:UIViewAnimationOptionRepeat animations:^{tmp.alpha = 0;} completion:^(BOOL fin){if(fin) [tmp removeFromSuperview];}];
+    [self updateUI];
     [self locateCardsOnBoard];
     return;
     //[self.gravity addItem:tmp];
@@ -272,6 +286,19 @@
     [self addCardToBoard];
     
    [self updateUI];
+    
+}
+
+
+- (IBAction)add12Cards {
+    if(self.setCardsBoard.count)
+        return;
+    for(int i = 0 ; i < 12 ; i++){
+          [self addCardToBoard];
+    }
+  
+
+    [self updateUI];
     
 }
 
