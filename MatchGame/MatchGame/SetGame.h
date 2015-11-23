@@ -10,4 +10,7 @@
 
 @interface SetGame : CardsGame
 
+-(void)add3Cards;
+
+-(void)removeCards:(NSArray *)others;
 @end

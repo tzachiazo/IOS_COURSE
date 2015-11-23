@@ -18,6 +18,7 @@
 - (Card *) cardAtIndex: (NSUInteger)index;
 - (NSString *)cardArrayToString:(NSMutableArray *)cardArray;
 
+@property (nonatomic , strong) Deck * deck;
 @property (nonatomic , strong) NSMutableArray *cards;
 @property (nonatomic, readwrite ) NSString * status;
 @property (nonatomic, readwrite) NSInteger score;

@@ -11,6 +11,7 @@
 #import "Deck.h"
 
 
+
 //#import "CardsGame.h"
 //#import "PlayingCard.h"
 //#import "PlayingCardDeck.h"
@@ -36,7 +37,18 @@
 
 @implementation ViewController
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
+    
+  
+    
+}
 
+- (IBAction)goButton:(UIButton *)sender {
+    
+    
+}
 @synthesize historyArray = _historyArray;
 
 -(NSMutableArray*)historyArray
@@ -44,6 +56,9 @@
     if(!_historyArray)
     {
         _historyArray = [[NSMutableArray alloc] init];
+        
+      
+        
     }
     return _historyArray;
 }
@@ -83,10 +98,8 @@
 }
 
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -101,6 +114,11 @@
     self.game = nil;
     //self.game.numOfCards = (self.matchSwitch.on)? 2 : 3;
     [self updateUI];
+    
+    
+    
+ 
+    
 }
 
 

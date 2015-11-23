@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #import "CardsGame.h"
+#import "Grid.h"
 
 @interface ViewController : UIViewController
 
@@ -27,5 +28,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *textview;
 
 @property (strong , nonatomic) NSMutableArray * historyArray;
+
+@property (strong , nonatomic) Grid * boardGrid;
 @end
 

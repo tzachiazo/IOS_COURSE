@@ -11,4 +11,8 @@
 
 @interface SetGameViewController : ViewController
 
+@property (strong , nonatomic) UIGravityBehavior *gravity;
+@property (strong , nonatomic) UIDynamicAnimator *animator;
+@property (strong , nonatomic) UICollisionBehavior *collider;
+@property (nonatomic) UIAttachmentBehavior * attach;
 @end

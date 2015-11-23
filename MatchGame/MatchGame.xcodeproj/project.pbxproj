@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		701B8A771C019B3A003AAB69 /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = 701B8A761C019B3A003AAB69 /* Grid.m */; };
 		7046AD3B1BF0D6720030C846 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7046AD3A1BF0D6720030C846 /* main.m */; };
 		7046AD3E1BF0D6720030C846 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7046AD3D1BF0D6720030C846 /* AppDelegate.m */; };
 		7046AD411BF0D6720030C846 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7046AD401BF0D6720030C846 /* ViewController.m */; };
@@ -48,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		701B8A751C019B3A003AAB69 /* Grid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grid.h; sourceTree = "<group>"; };
+		701B8A761C019B3A003AAB69 /* Grid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Grid.m; sourceTree = "<group>"; };
 		7046AD361BF0D6720030C846 /* MatchGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatchGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7046AD3A1BF0D6720030C846 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7046AD3C1BF0D6720030C846 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -141,6 +144,8 @@
 		7046AD381BF0D6720030C846 /* MatchGame */ = {
 			isa = PBXGroup;
 			children = (
+				701B8A751C019B3A003AAB69 /* Grid.h */,
+				701B8A761C019B3A003AAB69 /* Grid.m */,
 				7046AD3C1BF0D6720030C846 /* AppDelegate.h */,
 				7046AD3D1BF0D6720030C846 /* AppDelegate.m */,
 				7046AD3F1BF0D6720030C846 /* ViewController.h */,
@@ -349,6 +354,7 @@
 				70A997BB1BF9D39B00ECF571 /* SetGameViewController.m in Sources */,
 				7046AD771BF0EBD20030C846 /* PlayingCardDeck.m in Sources */,
 				70A997CA1BFB38CD00ECF571 /* SetDeck.m in Sources */,
+				701B8A771C019B3A003AAB69 /* Grid.m in Sources */,
 				70A997CD1BFCF61800ECF571 /* CardView.m in Sources */,
 				70A997D31BFDE64900ECF571 /* SetCardView.m in Sources */,
 				7046AD3B1BF0D6720030C846 /* main.m in Sources */,

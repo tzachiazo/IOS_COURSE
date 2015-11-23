@@ -45,7 +45,6 @@ static const int MISMATCH_PENALTY = 4;
                 self.score += matchScore * 8;
                 
                 card.matched = YES;
-                
                 for(Card * otherCard in openCards){
                     otherCard.matched = YES;
                 }
@@ -67,6 +66,30 @@ static const int MISMATCH_PENALTY = 4;
         
         self.score -= 1;
         card.chosen = YES;
+    }
+    
+}
+
+-(void)add3Cards
+{
+    if([self.cards count] < 12)
+    {
+        for(int i = 0 ; i < 3 ; i ++)
+        {
+             [self.cards addObject:[self.deck drawRandomCard]];
+        }
+       
+    }
+    
+}
+
+-(void)removeCards:(NSArray *)others
+{
+    
+    for(Card* cur in others)
+    {
+        
+        [self.cards removeObject:cur];
     }
     
 }

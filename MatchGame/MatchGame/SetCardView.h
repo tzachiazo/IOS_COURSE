@@ -8,12 +8,19 @@
 
 #import "CardView.h"
 
-@interface SetCardView : CardView
+@interface SetCardView : CardView <UIDynamicItem>
 
 
 @property (nonatomic) NSInteger shapeNumber;
 @property (nonatomic) NSInteger numShapesInCard;
 @property (nonatomic) UIColor * color;
+
+
+/*
+@property (readonly) CGRect bounds;
+@property (readwrite) CGPoint center;
+@property (readwrite) CGAffineTransform transform;
+*/
 
 
 @end

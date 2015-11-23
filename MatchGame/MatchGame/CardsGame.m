@@ -41,6 +41,7 @@
         }
     }
     
+    self.deck = deck;
     return self;
 
 }
